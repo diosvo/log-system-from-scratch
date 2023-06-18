@@ -64,7 +64,7 @@ historical
 middleManager
 ```
 
-_NOTE: In this quickstart, the coordinator and overlord run in the same process named coordinator. Also, we aren't showing the ZooKeeper process in the list._
+_**NOTE**: In this quickstart, the coordinator and overlord run in the same process named coordinator. Also, we aren't showing the ZooKeeper process in the list._
 
 <hr/>
 
