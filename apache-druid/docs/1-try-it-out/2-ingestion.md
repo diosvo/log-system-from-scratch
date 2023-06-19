@@ -45,8 +45,10 @@ There are four main steps to ingestion. These steps include:
 
 <hr/>
 
-### Location
+### Related
 
-[1] [Install a single-node Druid deployment](./1-installation.md)
+[1] [Install a single-node Druid deployment](1-installation.md)
 
 [2] 📍 you're here
+
+[3] [Perform queries on the sample data](3-querying.md)

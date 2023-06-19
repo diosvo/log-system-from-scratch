@@ -16,7 +16,7 @@ The ingested data is about updates to Wikipedia during a one day period. Both pe
 
 Suppose you want to know how updates vary for humans and robots over time. Here's a query that can help you answer that question.
 
-```
+```ruby
 SELECT
   DATE_TRUNC('hour',"__time"),
   (AVG(commentLength) FILTER(WHERE isRobot=true)) as robots,
@@ -28,3 +28,11 @@ GROUP BY 1
 Click on the Query tab, paste the query in the console and run it as shown. Then, check out the results.
 
 ![execute-query](./images/3-querying/execute-query.png)
+
+### Related
+
+[1] [Install a single-node Druid deployment](1-installation.md)
+
+[2] [Ingest sample data](2-ingestion.md)
+
+[3] 📍 you're here
