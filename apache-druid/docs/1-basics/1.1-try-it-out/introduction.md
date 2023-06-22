@@ -1,3 +1,10 @@
+### Try Druid
+
+- [**Deployment**](1-installation.md) - Stand up a multi-node Druid cluster
+- [**Ingest**](2-ingestion.md) - Use some example data to create a Druid table
+- [**Query**](3-querying.md) - Retrieve the example data using SQL
+- [**And more**](learn-more.md) - Investigate related material such as docs, white papers and articles
+
 ### What is Apache Druid?
 
 - A real time analytics database
@@ -13,11 +20,3 @@
 - Digital Advertising
 - Click-stream Analytics
 - IoT Data Analytics
-
-### Step-by-step
-
-[1] [Install a single-node Druid deployment](1-installation.md)
-
-[2] [Ingest sample data](2-ingestion.md)
-
-[3] [Perform queries on the sample data](3-querying.md)
