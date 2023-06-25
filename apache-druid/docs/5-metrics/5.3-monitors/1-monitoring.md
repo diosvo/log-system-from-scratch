@@ -162,6 +162,8 @@ druid.monitoring.monitors=["org.apache.druid.java.util.metrics.JvmMonitor"]
 
 **Step 10**
 
+<hr/>
+
 Restart the cluster so the configuration change will take effect (run this command in the Shell tab).
 
 ```ruby
@@ -172,6 +174,8 @@ while [ $(curl localhost:8888/ 2>&1 >/dev/null | grep Fail | wc -w) -gt 0 ]; do 
 ```
 
 **Step 11**
+
+<hr/>
 
 Finally, wait a minute (for the Broker to emit metrics) and then let's look at the Broker's metrics again to see what has changed.
 

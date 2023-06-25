@@ -38,12 +38,12 @@ Use the following commands to launch Druid and wait for Druid to initialize.
 
 ```ruby
 nohup /root/apache-druid-24.0.2/bin/start-nano-quickstart \
- > /root/log.out 2> /root/log.err \
- < /dev/null & disown
+  > /root/log.out 2> /root/log.err \
+  < /dev/null & disown
 while [ $(curl localhost:8888/ 2>&1 >/dev/null | grep Fail | wc -w) -gt 0 ]
 do
- echo "Waiting for Druid to initialize..."
- sleep 3
+  echo "Waiting for Druid to initialize..."
+  sleep 3
 done
 ```
 
@@ -82,7 +82,7 @@ grep -C 2 'org.apache.druid.java.util.emitter.core.LoggingEmitter - [{]' apache-
 
 We can extract just the JSON from the metric and format the JSON by using the following commands.
 
-```
+```ruby
 grep 'org.apache.druid.java.util.emitter.core.LoggingEmitter - [{]' apache-druid-24.0.2/log/broker.log \
   | head -n 1 \
   | awk 'BEGIN {FS = " - "} ; {print $2}' \
@@ -105,7 +105,7 @@ In the previous step, we saw an example of a single JSON metric. Let’s use a s
 
 We can extract the timestamps, the metric names, and associated values for all metrics (in tabular format) using the following commands.
 
-```
+```ruby
 grep 'org.apache.druid.java.util.emitter.core.LoggingEmitter - [{]' apache-druid-24.0.2/log/broker.log \
   | awk 'BEGIN {FS = " - "} ; {print $2}' \
   | jq 'select(has("type") | not) | select(.feed == "metrics") | "\(.timestamp) \(.metric) \(.value)"' \
