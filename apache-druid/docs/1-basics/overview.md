@@ -1,4 +1,4 @@
-## O V E R V I E W
+## OVERVIEW
 
 ### About this part
 
@@ -15,7 +15,7 @@ The Apache Druid database powers analytical applications for organizations large
 
 Familiarity with Linux is a bonus, but by no means a prerequisite.
 
-## C U R R I C U L U M
+## CURRICULUM
 
 <details open>
 
