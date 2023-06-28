@@ -1,3 +1,5 @@
+## CONFIGURATION
+
 **Step 1**
 
 <hr/>

@@ -1,4 +1,4 @@
-### LEARN MORE
+## LEARN MORE
 
 Learn more about monitors from the official Apache Druid documentation:
 

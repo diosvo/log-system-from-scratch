@@ -1,3 +1,5 @@
+## INGESTION
+
 There are two main approaches to ingesting Druid data
 
 ### 1. Batch ingestion
@@ -45,7 +47,7 @@ There are four main steps to ingestion. These steps include:
 
 <hr/>
 
-### Related
+## RELATED
 
 [1] [Install a single-node Druid deployment](1-installation.md)
 

@@ -1,4 +1,4 @@
-### LEARN MORE
+## LEARN MORE
 
 Take your understanding further by looking at these resources:
 

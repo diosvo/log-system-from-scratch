@@ -1,4 +1,4 @@
-### LEARN MORE
+## LEARN MORE
 
 Get into the detail in the Druid documentation:
 

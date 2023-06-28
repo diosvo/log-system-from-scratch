@@ -1,4 +1,4 @@
-### LEARN MORE
+## LEARN MORE
 
 Now you've got a taste for the architecture, take a look at this video that talks about how the processes interact with one another.
 

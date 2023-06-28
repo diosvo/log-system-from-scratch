@@ -1,4 +1,4 @@
-## [./jq](<(https://jqlang.github.io/jq/)>)
+## [./jq](https://jqlang.github.io/jq/)
 
 jq is a lightweight and flexible command-line JSON processor.
 
@@ -6,7 +6,7 @@ jq is like `sed` for JSON data - to slice and filter and map and transform struc
 
 ### How to use
 
-The simplest jq program is the expression <code style="background: #f9f2f4; color: #c7254e; border-radius: 4px; padding: 2px 4px">.</code>, which takes the input and produces it unchanged as output.
+The simplest jq program is the expression <code style="border-radius: 4px; padding: 2px 4px">.</code>, which takes the input and produces it unchanged as output.
 
 ```ruby
 curl 'https://api.github.com/repos/jqlang/jq/commits?per_page=5' | jq '.'
@@ -17,22 +17,28 @@ curl 'https://api.github.com/repos/jqlang/jq/commits?per_page=5' | jq '.'
 There's a lot of info we don't care about there, so we will:
 
 - restrict it down to the most interesting fields
-- filter null values with the <code style="background: #f9f2f4; color: #c7254e; border-radius: 4px; padding: 2px 4px">select</code> function
-- groups the elements with the <code style="background: #f9f2f4; color: #c7254e; border-radius: 4px; padding: 2px 4px">group_by</code> function having the same `author_id` field into separate arrays.
-- sorting an array with the specific field using <code style="background: #f9f2f4; color: #c7254e; border-radius: 4px; padding: 2px 4px">sort_by(path_expression)</code>
-- get top 3 with the <code style="background: #f9f2f4; color: #c7254e; border-radius: 4px; padding: 2px 4px">reverse</code> and <code style="background: #f9f2f4; color: #c7254e; border-radius: 4px; padding: 2px 4px">limit</code> functions
+- filter null values with the `select` function
+- groups the elements with the `group_by` function having the same `author_id` field into separate arrays.
+- sorting an array with the specific field using `sort_by(path_expression)`
+- get top 3 with the `reverse` and `limit` functions
 
 ```ruby
-curl 'https://api.github.com/repos/jqlang/jq/commits?per_page=100' | jq '[.[] | {author_id: .author.id, name: .commit.author.name, message: .commit.message} | select(.name != null and .message != null)] | group_by(.author_id) | [.[] | {author_id: .[0].author_id, name: .[0].name, total_commits: . | length }] | sort_by(.total_commits) | reverse | [limit(3;.[])]'
+curl 'https://api.github.com/repos/jqlang/jq/commits?per_page=100' \
+| jq '[.[]'\
+' | {author_id: .author.id, name: .commit.author.name, message: .commit.message}'\
+' | select(.name != null and .message != null)]'\
+' | group_by(.author_id) | [.[] | {author_id: .[0].author_id, name: .[0].name, total_commits: . | length }]'\
+' | sort_by(.total_commits)'\
+' | reverse | [limit(3;.[])]'
 ```
 
-where:
+Where:
 
-The <code style="background: #f9f2f4; color: #c7254e; border-radius: 4px; padding: 2px 4px">|</code> operator in jq feeds the output of one filter (.[] returns each element of the array returned in the response, one at a time)
+The `|` operator in jq feeds the output of one filter (`.[]` returns each element of the array returned in the response, one at a time)
 
 into
 
-The input of another (<code style="background: #f9f2f4; color: #c7254e; border-radius: 4px; padding: 2px 4px">{...}</code> which builds an object out of those fields).
+The input of another (`{...}` which builds an object out of those fields).
 
 ### 📄 References
 

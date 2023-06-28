@@ -1,4 +1,4 @@
-### METRICS BASICS
+## METRICS BASICS
 
 As you move on to operate Druid clusters in production, Druid metrics help you **maintain and improve Druid's performance**.
 

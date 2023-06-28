@@ -1,4 +1,4 @@
-### LEARN MORE
+## LEARN MORE
 
 You now know that viewing metrics graphically is a huge improvement over trying to understand them in log file format!
 

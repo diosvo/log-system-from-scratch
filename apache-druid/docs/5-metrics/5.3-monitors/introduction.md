@@ -1,4 +1,4 @@
-### METRICS MONITORS
+## METRICS MONITORS
 
 Druid emits a basic set of metrics by default: you can add more by configuring Druid with monitors.
 

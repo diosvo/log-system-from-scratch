@@ -1,3 +1,5 @@
+## QUERYING
+
 ### Fun facts about Druid queries:
 
 - we can use the Unified Druid Console and SQL

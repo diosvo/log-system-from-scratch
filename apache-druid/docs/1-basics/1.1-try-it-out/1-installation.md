@@ -1,4 +1,4 @@
-### Installation
+## INSTALLATION
 
 **Step 1**
 
@@ -74,7 +74,7 @@ _**NOTE**: In this quickstart, the coordinator and overlord run in the same proc
 
 <hr/>
 
-### Related
+## RELATED
 
 [1] 📍 you're here
 

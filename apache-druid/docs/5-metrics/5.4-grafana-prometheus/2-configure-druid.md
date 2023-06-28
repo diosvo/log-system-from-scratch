@@ -1,4 +1,4 @@
-### CONFIGURE DRUID
+## CONFIGURE DRUID
 
 Let's configure Druid to emit metrics to Prometheus, and then Launch Druid.
 

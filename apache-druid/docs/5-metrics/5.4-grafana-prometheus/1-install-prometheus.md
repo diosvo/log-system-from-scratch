@@ -1,4 +1,4 @@
-### INSTALL PROMETHEUS
+## INSTALL PROMETHEUS
 
 This lab consists of three exercises, which configure and install Prometheus, Druid and Grafana, respectively. In this first exercise will focus on Prometheus.
 

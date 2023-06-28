@@ -1,4 +1,4 @@
-### PROMETHEUS AND GRAFANA
+## PROMETHEUS AND GRAFANA
 
 It's very common to use Prometheus ([a time-series database](https://prometheus.io/)) with Grafana ([a dashboarding tool](https://grafana.com/grafana/)) to provide a way to monitor system health:
 

@@ -1,3 +1,5 @@
+## OVERVIEW
+
 ### About this part
 
 Druid's distributed design and optimized data storage format make it awesome for large-scale, massively parallel processing and storage. When systems based on this design have issues metrics can help you understand where the problems are.

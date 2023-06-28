@@ -1,4 +1,4 @@
-### INSTALL GRAFANA
+## INSTALL GRAFANA
 
 In the previous exercises, we set up Druid to emit metrics to Prometheus. In this exercise we'll install Grafana so we can visualize the metrics.
 

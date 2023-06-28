@@ -1,8 +1,10 @@
+## MONITORING
+
 **Step 1**
 
 <hr/>
 
-We need to modify the Druid configuration to enable metrics. This lab environment uses the nano-quickstart configuration. open _common.runtime.properties_ file in the conf folder.
+We need to modify the Druid configuration to enable metrics. This lab environment uses the nano-quickstart configuration, open _common.runtime.properties_ file in the conf folder.
 
 **Step 2**
 
