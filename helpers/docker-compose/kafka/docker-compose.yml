@@ -1,0 +1,33 @@
+#
+# Apache Kafka: an open-source distributed event streaming platform used by thousands of companies for high-performance data pipelines, streaming analytics, ...
+# https://kafka.apache.org/
+# Zookeeper: a centralized service for maintaining configuration information, naming, providing distributed synchronization, and providing group services
+# https://zookeeper.apache.org/
+#
+services:
+  zookeeper:
+    image: confluentinc/cp-zookeeper:latest
+    container_name: zookeeper 
+    networks:
+    - kafka_network 
+    env_file:
+      - ./config/environment
+    ports:
+      - 22181:2181
+
+  kafka:
+    image: confluentinc/cp-kafka:latest
+    container_name: kafka 
+    networks:
+      - kafka_network
+    depends_on:
+    - zookeeper 
+    ports:
+      - 29092:29092
+      - 29093:29093 
+    env_file:
+      - ./config/environment
+
+networks:
+  kafka_network:
+    name: kafka_docker_example_net

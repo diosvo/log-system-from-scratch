@@ -7,6 +7,8 @@
     "dashboarding",
     "datasources",
     "Ddruid",
+    "diosvo",
+    "Fluentd",
     "Instruqt",
     "JDBC",
     "nohup",
