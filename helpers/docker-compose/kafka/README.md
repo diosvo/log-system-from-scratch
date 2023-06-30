@@ -37,3 +37,4 @@ After direct to `kafka` folder, follow these actions to interact with the data
 | Name                                                                                            |
 | ----------------------------------------------------------------------------------------------- |
 | [How to Connect to Apache Kafka running in Docker](https://www.youtube.com/watch?v=L--VuzFiYrM) |
+| [The Ultimate Guide of Using Kafka with Node.js](https://www.youtube.com/watch?v=gTwXG8lC2GM)   |
