@@ -1,0 +1,10 @@
+#
+# Fluentd: an open source data collector, which lets you unify the data collection and consumption for a better use and understanding of data
+# https://docs.fluentd.org/
+#
+services:
+  fluentd:
+    image: fluent/fluentd:edge-debian
+    container_name: fluentd
+    ports:
+      - 24231:24231

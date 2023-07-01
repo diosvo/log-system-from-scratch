@@ -1,0 +1,2 @@
+2023-06-30T16:53:54+00:00	docker.38e38b57a2e0	{"container_name":"/stoic_jemison","source":"stdout","log":"Hello","container_id":"38e38b57a2e05208d4542416dd8a5b6d86ea0b7d417a6735f3cbe3fb996a3565"}
+2023-06-30T16:55:53+00:00	docker.d8c0e824c894	{"container_id":"d8c0e824c89475b751f7ecb6cafc362c0bdd8587a397cdab26f329adf3ffacf3","container_name":"/awesome_wing","source":"stdout","log":"Helloooooo"}
