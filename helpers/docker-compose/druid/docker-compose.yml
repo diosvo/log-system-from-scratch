@@ -46,7 +46,7 @@ services:
     command:
       - coordinator
     env_file:
-      - environment
+      - ./config/environment
 
   broker:
     image: apache/druid:26.0.0
@@ -62,7 +62,7 @@ services:
     command:
       - broker
     env_file:
-      - environment
+      - ./config/environment
 
   historical:
     image: apache/druid:26.0.0
@@ -79,7 +79,7 @@ services:
     command:
       - historical
     env_file:
-      - environment
+      - ./config/environment
 
   middlemanager:
     image: apache/druid:26.0.0
@@ -97,7 +97,7 @@ services:
     command:
       - middleManager
     env_file:
-      - environment
+      - ./config/environment
 
   router:
     image: apache/druid:26.0.0
@@ -113,4 +113,4 @@ services:
     command:
       - router
     env_file:
-      - environment
+      - ./config/environment

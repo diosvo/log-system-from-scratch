@@ -1,0 +1,3 @@
+{
+  "query": "INSERT INTO wikipedia SELECT TIME_PARSE(\"timestamp\") AS __time, page FROM TABLE( EXTERN( '{\"type\": \"http\", \"uris\": [\"https://static.imply.io/gianm/wikipedia-2016-06-27-sampled.json\"]}', '{\"type\": \"json\"}', '[{\"name\": \"timestamp\", \"type\": \"string\"}, {\"name\": \"page\", \"type\": \"string\"}, {\"name\": \"user\", \"type\": \"string\"}]')) PARTITIONED BY DAY"
+}

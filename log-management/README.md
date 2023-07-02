@@ -33,15 +33,19 @@ Your Docker Compose file will run containers for:
 
 - open browser and access one of these URLs:
 
-  | Host                                          | Note                                                                                       |
-  | --------------------------------------------- | ------------------------------------------------------------------------------------------ |
-  | [Druid Console](http://localhost:8888/)       |                                                                                            |
-  | [Prometheus](http://localhost:9090/)          | [Prometheus server URL](http://prometheus:9090)                                            |
-  | [Grafana](http://localhost:3000/dashboards)   | find the credentials needed in `~/.helpers/docker-compose/grafana/config/credentials` file |
-  | [cAdvisor](http://localhost:8080/containers/) | [Metrics](http://localhost:8080/metrics)                                                   |
+  | Host                                           | Note                                                                                       |
+  | ---------------------------------------------- | ------------------------------------------------------------------------------------------ |
+  | [Druid Router Console](http://localhost:8888/) |                                                                                            |
+  | [Prometheus](http://localhost:9090/)           | [Prometheus server URL](http://prometheus:9090)                                            |
+  | [Grafana](http://localhost:3000/dashboards)    | find the credentials needed in `~/.helpers/docker-compose/grafana/config/credentials` file |
+  | [cAdvisor](http://localhost:8080/containers/)  | [Metrics](http://localhost:8080/metrics)                                                   |
 
 - to access a specific container, execute:
 
   ```ruby
   docker exec -it --user root <container_name> bash
   ```
+
+## Improvement
+
+- [Import docker compose file in another compose file](https://stackoverflow.com/questions/55650342/import-docker-compose-file-in-another-compose-file)

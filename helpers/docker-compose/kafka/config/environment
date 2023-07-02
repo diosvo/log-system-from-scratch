@@ -3,6 +3,14 @@
 #
 ZOOKEEPER_CLIENT_PORT=2181
 ZOOKEEPER_TICK_TIME=2000
+
+#
+# Zookeeper Monitor: provides the abundant metrics to help users monitor the ZooKeeper on the topic: znode, network, disk, quorum, leader election, client, security, failures, watch/session, requestProcessor, and so forth.
+# https://zookeeper.apache.org/doc/r3.8.0/zookeeperMonitor.html#Metrics-System
+
+metricsProvider.className=org.apache.zookeeper.metrics.prometheus.PrometheusMetricsProvider
+metricsProvider.httpPort=7000 # default port
+
 #
 # Kafka
 #

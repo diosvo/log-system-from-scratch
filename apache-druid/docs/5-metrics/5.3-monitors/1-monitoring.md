@@ -38,7 +38,7 @@ done
 
 <hr/>
 
-Let's wait for Druid to emit some metrics. Remember, By default Druid emits metrics every minute.
+Let's wait for Druid to emit some metrics. Remember, by default Druid emits metrics every minute.
 
 ```ruby
 while [ $(grep -C 2 'org.apache.druid.java.util.emitter.core.LoggingEmitter - [{]' apache-druid-24.0.2/log/broker.log | wc -l) -eq 0 ]
@@ -61,7 +61,7 @@ grep 'org.apache.druid.java.util.emitter.core.LoggingEmitter - [{]' apache-druid
   | awk '{printf "%17.17s - %-30s %s\n", $1, $2, $3}'
 ```
 
-We see Jetty and _Avatica_ messages. If you’re familiar with Druid, you’ll know that [_Jetty_](https://www.eclipse.org/jetty/) is what Druid uses for all its web services, and [_Avatica_](https://calcite.apache.org/avatica/) is a JDBC driver from Apache Calcite, which is used for SQL query parsing and planning.
+We see _Jetty_ and _Avatica_ messages. If you’re familiar with Druid, you’ll know that [_Jetty_](https://www.eclipse.org/jetty/) is what Druid uses for all its web services, and [_Avatica_](https://calcite.apache.org/avatica/) is a JDBC driver from Apache Calcite, which is used for SQL query parsing and planning.
 
 These metrics are the basic metrics that the Broker always emits.
 

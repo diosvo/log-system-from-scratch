@@ -27,7 +27,7 @@ curl 'https://api.github.com/repos/jqlang/jq/commits?per_page=100' \
 | jq '[.[]'\
 ' | {author_id: .author.id, name: .commit.author.name, message: .commit.message}'\
 ' | select(.name != null and .message != null)]'\
-' | group_by(.author_id) | [.[] | {author_id: .[0].author_id, name: .[0].name, total_commits: . | length }]'\
+' | group_by(.author_id) | [.[] | {author_id: .[0].author_id, name: .[0].name, total_commits: . | length}]'\
 ' | sort_by(.total_commits)'\
 ' | reverse | [limit(3;.[])]'
 ```

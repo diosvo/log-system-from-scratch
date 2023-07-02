@@ -4,7 +4,7 @@
 #
 services:
   fluentd:
-    image: fluent/fluentd:edge-debian
+    image: fluent/fluentd:v1.16-debian-1
     container_name: fluentd
     ports:
       - 24231:24231

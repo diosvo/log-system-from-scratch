@@ -1,0 +1,3 @@
+{
+  "query": "SELECT * FROM wikipedia LIMIT 1"
+}

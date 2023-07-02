@@ -1,0 +1,8 @@
+global:
+  scrape_interval: 10s # Prometheus will scrape zk metrics every 10 seconds.
+
+scrape_configs:
+  - job_name: zookeeper
+    static_configs:
+      - targets:
+          ["192.168.10.32:7000", "192.168.10.33:7000", "192.168.10.34:7000"]
