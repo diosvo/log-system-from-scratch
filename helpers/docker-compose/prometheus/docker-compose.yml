@@ -13,7 +13,17 @@ services:
     ports:
       - 9090:9090
     volumes:
-      - /etc/prometheus:/etc/prometheus
+      - ./prometheus/:/etc/prometheus/
       - prometheus-data:/prometheus
-    command: "--config.file=/etc/prometheus/prometheus.yml"
-    restart: unless-stopped
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/usr/share/prometheus/console_libraries'
+      - '--web.console.templates=/usr/share/prometheus/consoles'
+    networks:
+      - kafka
+    restart: always
+
+networks:
+  kafka:
+    external: false

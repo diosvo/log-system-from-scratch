@@ -21,6 +21,26 @@ It's better to have more metrics monitored than less to easily troubleshoot issu
 
 ## Kafka Primer for Docker
 
+### bootstrap.server
+
+- connecting from remote client machine different from docker running kafka
+
+  ```
+  localhost:29094
+  ```
+
+- connecting from docker machine running kafka
+
+  ```
+  localhost:29092
+  ```
+
+### jmx.metrics
+
+- localhost:29103
+- download and add jmx exporter jar if you need metrics and can comment line "EXTRA_ARGS"
+- download location : https://github.com/prometheus/jmx_exporter
+
 ### Kafka Listeners
 
 There are two types of listeners

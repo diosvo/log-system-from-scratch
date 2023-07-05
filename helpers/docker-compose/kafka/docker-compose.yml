@@ -4,29 +4,46 @@
 # Zookeeper: a centralized service for maintaining configuration information, naming, providing distributed synchronization, and providing group services
 # https://zookeeper.apache.org/
 #
+volumes:
+  kafka-jmx-volume:
+
 services:
+  kafka:
+    image: confluentinc/cp-kafka:latest
+    container_name: kafka
+    ports:
+      - 29094:29092
+      - 29103:29101
+    env_file:
+      - ./config/environment
+    networks:
+      - kafka
+    logging:
+      driver: local
+    volumes:
+      - ./jmx-exporter:/usr/share/jmx_exporter/
+      - kafka-jmx-volume:/jmx-exporter
+    depends_on:
+      - zookeeper
+
   zookeeper:
     image: confluentinc/cp-zookeeper:latest
     container_name: zookeeper
-    networks:
-      - kafka
-    env_file:
-      - ./config/environment
     ports:
       - 2181:2181
-
-  kafka:
-    image: confluentinc/cp-kafka:latest
-    container_name: kafka 
     networks:
       - kafka
-    depends_on:
-    - zookeeper
-    ports:
-      - 29092:29092
-      - 29093:29093
     env_file:
       - ./config/environment
+
+  extends:
+    grafana:  
+      file: ../grafana/docker-compose.yml
+      service: grafana
+
+    prometheus:  
+      file: ../prometheus/docker-compose.yml
+      service: prometheus
 
 networks:
   kafka:
