@@ -33,14 +33,35 @@ Others:
 
 ### Ensure you include the following concepts in the shell scripts you are writing:
 
-- Variable definitions.
-- Use [cut, awk, grep, and sed](https://blog.knoldus.com/play-with-text-in-linux-grep-cut-awk-sed/)
-- Handling Input/ Output / Error redirection.
-- Conditions/ If else statements.
-- Case statement scripts.
-- Loops (For/Do-While)
-- Exist status.
-- Command line arguments.
+1. Variable definitions
+
+- One of the reasons why we include a dollar sign in front of variable name?
+
+  -> Help us avoid name collisions
+
+  ```ruby
+  $ ls="Hello Again"
+  $ ls
+  > ... # print list files in current working directory
+  $ echo $ls
+  > Hello Again
+  ```
+
+- Any variables in bash are tied to that session will be wiped out once you close the window (e.g. type `exit`)
+- We use double quotes in bash, it's going to actually treat the variables inside the `echo` statement to show what the variables equal rather than the names themselves.
+- Sub-shell (e.g. `$(pwd)`) allows you to execute command in the background.
+- Within the environment, there are many default variables that are always declared (e.g. `$USER`). Type `env` to view the environment variables within Linux system.
+- Lowercase and uppercase variable names have an important distinction:
+  - Uppercase: is commonly a system variable, something that's basically built-in.
+  - Lowercase: our variables.
+
+2. Use [cut, awk, grep, and sed](https://blog.knoldus.com/play-with-text-in-linux-grep-cut-awk-sed/)
+3. Handling Input/ Output / Error redirection.
+4. Conditions/ If else statements.
+5. Case statement scripts.
+6. Loops (For/Do-While)
+7. Exist status.
+8. Command line arguments.
 
 ## 🗞️ Blogs
 
@@ -54,4 +75,5 @@ Others:
 
 📹
 
-- [Bash Scripting on Linux](https://www.youtube.com/playlist?list=PLT98CRl2KxKGj-VKtApD8-zCqSaN2mD4w)
+- [Bash Scripting on Linux](https://www.youtube.com/playlist?list=PLT98CRl2KxKGj-VKtApD8-zCqSaN2mD4w) > 🗂️ study/bash/scripts/bash-scripting-on-linux
+- [Linux Crash Course](https://www.youtube.com/playlist?list=PLT98CRl2KxKHKd_tH3ssq0HPrThx2hESW)

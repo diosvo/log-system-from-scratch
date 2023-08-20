@@ -1,0 +1,7 @@
+#!/bin/bash
+
+dir=$(pwd)
+now=$(date)
+
+echo "I'm $USER"
+echo "[$now] The current working directory: $dir"
