@@ -72,6 +72,7 @@ Others:
 📑
 
 - [The Bash Guide](https://guide.bash.academy/)
+- [How to Change File Permissions and Ownership in Linux](https://www.freecodecamp.org/news/linux-chmod-chown-change-file-permissions/)
 
 📹
 
