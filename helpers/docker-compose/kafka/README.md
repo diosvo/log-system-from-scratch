@@ -1,8 +1,10 @@
-## Overview
+## 💡 Overview
 
-**Kafka** is all about events. Events are organized in topics and categorized into partitions. These streams of events can then be used to build Publish/Subscribe systems or a Message Queues, which processes messages in parallel
+**Kafka** is all about events. Events are organized in topics and categorized into partitions. These streams of events can then be used to build Publish/Subscribe systems or a Message Queues, which processes messages in parallel.
 
 ![architecture](./images/architecture.png)
+
+**Prometheus** to pull metrics from **Kafka** and then visualize the important metrics on a **Grafana** dashboard.
 
 ### Monitoring
 
@@ -39,7 +41,7 @@ It's better to have more metrics monitored than less to easily troubleshoot issu
 
 - localhost:29103
 - download and add jmx exporter jar if you need metrics and can comment line "EXTRA_ARGS"
-- download location : https://github.com/prometheus/jmx_exporter
+- download location: https://github.com/prometheus/jmx_exporter
 
 ### Kafka Listeners
 
@@ -50,7 +52,7 @@ There are two types of listeners
 
 ![docker](./images/for-docker.png)
 
-## Installation
+## ⚙️ Installation
 
 ```ruby
 cd helpers/docker-compose/kafka # skip this command if you're already in kafka folder
@@ -68,17 +70,11 @@ After direct to `kafka` folder, follow these actions to interact with the data
 | Kafka Producer                   | `docker run -it --rm --network kafka_docker_example_net confluentinc/cp-kafka /bin/kafka-console-producer --bootstrap-server kafka:9092 --topic test_topic` |
 | Kafka Consumer                   | `docker run -it --rm --network kafka_docker_example_net confluentinc/cp-kafka /bin/kafka-console-consumer --bootstrap-server kafka:9092 --topic test_topic` |
 
-## Related Images
+Open two terminals in parallel to see the producer and consumer work
 
-- Diagram
+![producer-consumer](./images/kafka-producer-consumer.png)
 
-  ![private-network](./images/private-network.png)
-
-- Open two terminals in parallel to see the producer and consumer
-
-  ![producer-consumer](./images/kafka-producer-consumer.png)
-
-## References
+## 📚 References
 
 - [How to Connect to Apache Kafka running in Docker](https://www.youtube.com/watch?v=L--VuzFiYrM)
 - [The Ultimate Guide of Using Kafka with Node.js](https://www.youtube.com/watch?v=gTwXG8lC2GM)
