@@ -5,6 +5,7 @@
 **NOTE:**
 
 - [Cheat-sheet](./misc/cheat-sheet.md)
+- [Permission](./misc/permission.md)
 
 ### Shell Scripting Real-Time Scenarios
 
@@ -35,7 +36,7 @@ Others:
 
 1. Variable definitions
 
-- One of the reasons why we include a dollar sign in front of variable name?
+- One of the reasons why we include a dollar sign in front of the variable name?
 
   -> Help us avoid name collisions
 
@@ -48,11 +49,11 @@ Others:
   ```
 
 - Any variables in bash are tied to that session will be wiped out once you close the window (e.g. type `exit`)
-- We use double quotes in bash, it's going to actually treat the variables inside the `echo` statement to show what the variables equal rather than the names themselves.
-- Sub-shell (e.g. `$(pwd)`) allows you to execute command in the background.
-- Within the environment, there are many default variables that are always declared (e.g. `$USER`). Type `env` to view the environment variables within Linux system.
+- We use double quotes in bash, it's going to treat the variables inside the `echo` statement to show what the variables equal rather than the names themselves.
+- Sub-shell (e.g. `$(pwd)`) allows you to execute the command in the background.
+- Within the environment, many default variables are always declared (e.g. `$USER`). Type `env` to view the environment variables within Linux system.
 - Lowercase and uppercase variable names have an important distinction:
-  - Uppercase: is commonly a system variable, something that's basically built-in.
+  - Uppercase: is commonly a system variable, something that's built-in.
   - Lowercase: our variables.
 
 2. Use [cut, awk, grep, and sed](https://blog.knoldus.com/play-with-text-in-linux-grep-cut-awk-sed/)
