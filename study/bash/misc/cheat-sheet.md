@@ -27,4 +27,8 @@ A cheat sheet of the commands I use most for Linux
 
 ### Other ones
 
-- `echo $SHELL` - which shell we are using within the terminal window
+| Command       | Description                                                |
+| :------------ | :--------------------------------------------------------- |
+| `echo $SHELL` | Which shell we are using within the terminal window        |
+| `fg`          | Switch a job running in the background into the foreground |
+| `which`       | Find out if file is actually present                       |

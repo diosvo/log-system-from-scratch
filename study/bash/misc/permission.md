@@ -27,8 +27,8 @@ drwxr-xr-x  3 diosvo  staff    96 Aug 19 15:44 scripts
 In the output above:
 
 | file type                                  | user  | group | other | owner  | group | size | modification date | file/ folder name |
-| :----------------------------------------- | :---- | :---- | :---- | :----- | :---- | :--- | :---------------- | ----------------: |
-| `d`: a directory <br/> `-`: a regular file | `rw-` | `r--` | `r--` | diosvo | staff | 3016 | Aug 20 15:17      |         README.md |
+| :----------------------------------------- | :---- | :---- | :---- | :----- | :---- | :--- | :---------------- | :---------------- |
+| `d`: a directory <br/> `-`: a regular file | `rw-` | `r--` | `r--` | diosvo | staff | 3016 | Aug 20 15:17      | README.md         |
 
 ### Change Permissions
 

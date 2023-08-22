@@ -5,7 +5,7 @@
 **NOTE:**
 
 - [Cheat-sheet](./misc/cheat-sheet.md)
-- [Permission](./misc/permission.md)
+- [Change permission files and ownership](./misc/permission.md)
 
 ### Shell Scripting Real-Time Scenarios
 
@@ -34,7 +34,7 @@ Others:
 
 ### Ensure you include the following concepts in the shell scripts you are writing:
 
-1. Variable definitions
+1. [Variable definitions](scripts/bash-scripting-on-linux/variables)
 
 - One of the reasons why we include a dollar sign in front of the variable name?
 
@@ -51,14 +51,27 @@ Others:
 - Any variables in bash are tied to that session will be wiped out once you close the window (e.g. type `exit`)
 - We use double quotes in bash, it's going to treat the variables inside the `echo` statement to show what the variables equal rather than the names themselves.
 - Sub-shell (e.g. `$(pwd)`) allows you to execute the command in the background.
-- Within the environment, many default variables are always declared (e.g. `$USER`). Type `env` to view the environment variables within Linux system.
+- Within the environment, many default variables are always declared (e.g. `$USER`). Type `env` to view the environment variables within the Linux system.
 - Lowercase and uppercase variable names have an important distinction:
   - Uppercase: is commonly a system variable, something that's built-in.
   - Lowercase: our variables.
 
 2. Use [cut, awk, grep, and sed](https://blog.knoldus.com/play-with-text-in-linux-grep-cut-awk-sed/)
 3. Handling Input/ Output / Error redirection.
-4. Conditions/ If else statements.
+4. [Conditions/ If else statements](scripts/bash-scripting-on-linux/conditions)
+
+   We can type `man test` to get all expressions that could be used.
+
+   | Syntax                | Description                                        |
+   | :-------------------- | :------------------------------------------------- |
+   | 1. Numeric Comparison |
+   | `-eq`                 | Equal                                              |
+   | `-ne`                 | Not equal                                          |
+   | `-gt`                 | Greater than                                       |
+   | 2. Files              |                                                    |
+   | `-f` / `-d`           | A check for the existence of files and directories |
+   | `command -v $package` | Check for the existence of a command               |
+
 5. Case statement scripts.
 6. Loops (For/Do-While)
 7. Exist status.
