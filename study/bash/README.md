@@ -74,7 +74,16 @@ Others:
 
 5. Case statement scripts.
 6. Loops (For/Do-While)
-7. Exist status.
+7. [Exist status](scripts/bash-scripting-on-linux/exist-codes)
+
+- `ls -l /misc` - Bash perceives success and failure
+- `$?` - Check the `$?` variable to determine a command's exit code, returns:
+
+  - `0` - the command was successful
+  - An exit code of anything other than zero constitutes failure
+
+  => Why do we need to know what an exact code is?
+
 8. Command line arguments.
 
 ## 🗞️ Blogs
