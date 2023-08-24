@@ -73,7 +73,7 @@ Others:
    | `command -v $package` | Check for the existence of a command               |
 
 5. Case statement scripts.
-6. Loops (For/Do-While)
+6. [Loops (For/Do-While)](scripts/bash-scripting-on-linux/loops)
 7. [Exist status](scripts/bash-scripting-on-linux/exist-codes)
 
 - `ls -l /misc` - Bash perceives success and failure
